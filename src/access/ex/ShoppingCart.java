@@ -18,6 +18,14 @@ public class ShoppingCart {
         for (int i = 0; i < itemCount; i++) {
             System.out.println("상품명: "+items[i].getName()+", 합계: "+items[i].totalPrice());
         }
+        System.out.println("전체 가격 합: "+totalPrice());
+    }
+    public int totalPrice() {
+        int result = 0;
+        for (int i = 0; i < itemCount; i++) {
+            result += items[i].totalPrice();
+        }
+        return result;
     }
 
 }
